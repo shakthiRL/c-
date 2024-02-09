@@ -23,8 +23,8 @@ int romanToInt(string s) {
     return result;
 }
 int main() {
-    string romanNumeral = "MCMXCIV"; // Example: 1994
-    cout << "Roman numeral: " << romanNumeral << endl;
-    cout << "Integer value: " << romanToInt(romanNumeral) << endl;
+    string romanNumeral = "MCMXCIV";
+    cout << "Roman numeral: " << romanNumeral;
+    cout << "Integer value: " << romanToInt(romanNumeral);
     return 0;
 }
