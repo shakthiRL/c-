@@ -1,0 +1,30 @@
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+int romanToInt(string s) {
+    unordered_map<char, int> romanMap;
+    romanMap['I'] = 1;
+    romanMap['V'] = 5;
+    romanMap['X'] = 10;
+    romanMap['L'] = 50;
+    romanMap['C'] = 100;
+    romanMap['D'] = 500;
+    romanMap['M'] = 1000;
+    int result = 0;
+    int prevValue = 0;
+    for (char c : s) {
+        int value = romanMap[c];
+        result += value;
+        if (value > prevValue) {
+            result -= 2 * prevValue;
+        }
+        prevValue = value;
+    }
+    return result;
+}
+int main() {
+    string romanNumeral = "MCMXCIV"; // Example: 1994
+    cout << "Roman numeral: " << romanNumeral << endl;
+    cout << "Integer value: " << romanToInt(romanNumeral) << endl;
+    return 0;
+}
