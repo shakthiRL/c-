@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+bool isValidPhoneNumber(const std::string& number) {
+    if (number.size() != 10) {
+        return false; 
+    }
+    for (char c : number) {
+        if (!isdigit(c)) {
+            return false;
+        }
+    }
+   return true;
+}
+int main() {
+    std::string phoneNumber = "1234567890"; // Example phone number
+    std::cout << "Phone number: " << phoneNumber << std::endl;
+    std::cout << "Is valid phone number? " << (isValidPhoneNumber(phoneNumber) ? "Yes" : "No") << std::endl;
+    return 0;
+}
