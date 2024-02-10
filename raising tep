@@ -1,0 +1,9 @@
+#include <iostream>
+int main() {
+    int temperature = 20;
+    int raiseBy = 5; 
+    std::cout << "Initial temperature: " << temperature << std::endl;
+    temperature += raiseBy;
+    std::cout << "Raised temperature: " << temperature << std::endl;
+    return 0;
+}
