@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    std::string str = "Hello World";
+    int length = 0;
+    for (int i = str.size() - 1; i >= 0; --i) {
+        if (str[i] == ' ' && length > 0) {
+            break;
+        } else if (str[i] != ' ') {
+            length++;
+        }
+    }
+    std::cout << "Length of last word: " << length << std::endl;
+    return 0;
+}
