@@ -1,0 +1,18 @@
+#include <iostream>
+double sqrtWithoutFunction(double x) {
+    double epsilon = 0.00001; 
+    double guess = x / 2.0; 
+    while (true) {
+        double new_guess = 0.5 * (guess + x / guess); 
+        if (std::abs(guess - new_guess) < epsilon) {
+            break; 
+        }
+        guess = new_guess;
+    }
+    return guess;
+}
+int main() {
+    double x = 25.0; 
+    std::cout << "Square root of " << x << " without using functions: " << sqrtWithoutFunction(x) << std::endl;
+    return 0;
+}
