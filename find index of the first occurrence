@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+int findFirstOccurrence(const std::string& s, char target) {
+    int index = -1;
+    for (int i = 0; i < s.length(); ++i) {
+        if (s[i] == target) {
+            index = i; 
+            break; 
+        }
+    }
+    return index;
+}
+int main() {
+    std::string str = "example string";
+    char target = 's'; 
+    int index = findFirstOccurrence(str, target);
+    if (index != -1) {
+        std::cout << "First occurrence of '" << target << "' is at index: " << index << std::endl;
+    } else {
+        std::cout << "Character '" << target << "' not found in the string." << std::endl;
+    }
+
+    return 0;
+}
