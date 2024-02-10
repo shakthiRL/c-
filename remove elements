@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int pos = 2; // index of element to remove
+    std::cout << "Original Array: ";
+    for (int i = 0; i < n; ++i) {
+      cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+    for (int i = pos; i < n - 1; ++i) {
+        arr[i] = arr[i + 1];
+    }
+    n--;
+    std::cout << "Array after removal: ";
+    for (int i = 0; i < n; ++i) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
