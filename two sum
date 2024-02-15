@@ -13,6 +13,4 @@ int main() {
             }
         }
     }
-    cout << "No solution found!" << std::endl;
-    return 0;
 }
